@@ -4,6 +4,12 @@ var ctx = document.getElementById('myChart').getContext('2d');
 
 const rotoData = getRotom();
 
+// --color1: hsla(0, 100%, 50%, 1);
+// --color2: hsla(0, 100%, 40%, 1);
+// --color3: hsla(233, 57%, 51%, 1);
+// --color4: hsla(52, 100%, 50%, 1);
+// --color5: hsla(52, 66%, 42%, 1);
+// --color6: hsla(52, 66%, 42%, .25);
 
 var myChart = new Chart(ctx, { // eslint-disable-line
     type: 'bar',
@@ -14,19 +20,9 @@ var myChart = new Chart(ctx, { // eslint-disable-line
             data: encounterMungies(rotoData),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
         }, {
@@ -34,19 +30,9 @@ var myChart = new Chart(ctx, { // eslint-disable-line
             data: captureMungies(rotoData),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
         }
@@ -56,7 +42,14 @@ var myChart = new Chart(ctx, { // eslint-disable-line
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    stepSize: 1
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    stepSize: 1
                 }
             }]
         }
