@@ -46,6 +46,3 @@ export function incrementCapture(pokemon) {
 
     setRotom(rotoData);
 }
-
-
-

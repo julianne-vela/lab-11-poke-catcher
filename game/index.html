@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../common/styles/reset.css">
     <link rel="stylesheet" href="./game.css">
     <title>Nessi's Poke Capture</title>
@@ -16,18 +18,21 @@
         <h2>Nessi's Poke Capture</h2>
     </header>
     <main>
-        <section id="game-container">
+        <section class="game-container">
             <content id="progress-bar">
-                <!-- insert progress bar here -->
+                <p class="screen" class="capture-total">
+                    <!-- insert caught total here -->
+                </p>
             </content>
-            <content id="pokemon-round">
+            <content id="pokemon-round" class="game-boy">
                 <!-- insert randomly generated pokemon here. -->
             </content>
+            <a class="gameboy-img" href="./index.html"><img src="../assets/gameBoy.png" alt="a Nintendo gameboy"></a>
 
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <a href="../about-me.html"><button class="copy gutter-right">About the Dev</button></a>
     </footer>
 
     <script type="module" src="./poke-capture.js"></script>

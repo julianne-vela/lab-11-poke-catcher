@@ -6,11 +6,9 @@ import {
     incrementCapture,
 } from '../common/utils/local-storage-api.js';
 
-let numberOfTurns = 0;
+let pokeballs = 10;
 
 export function setThreePokemon() {
-    numberOfTurns++;
-
     let pokeOne = getRandomPokemon();
     let pokeTwo = getRandomPokemon();
     let pokeThree = getRandomPokemon();
@@ -22,8 +20,11 @@ export function setThreePokemon() {
     }
 
     const img1 = renderPokeImage(pokeOne);
+    img1.classList.add('image1');
     const img2 = renderPokeImage(pokeTwo);
+    img2.classList.add('image2');
     const img3 = renderPokeImage(pokeThree);
+    img3.classList.add('image3');
 
     incrementEncounter(pokeOne.pokemon);
     incrementEncounter(pokeTwo.pokemon);
@@ -39,14 +40,16 @@ export function setThreePokemon() {
 export function renderPokeImage(pokemon) {
     const image = document.createElement('img');
     image.src = pokemon.url_image;
-    image.classList.add('poke-img');
     image.addEventListener('click', () => {
         incrementCapture(pokemon);
-        if (numberOfTurns < 10) {
+        pokeballs--;
+
+        if (pokeballs > 1) {
             setThreePokemon();
         } else {
             window.location = '../../results/index.html';
         }
     });
+
     return image;
 }

@@ -17,5 +17,5 @@ for (let pokemon of rotoData) {
 clearGameBtn.addEventListener('click', () => {
     clearRotom();
     alert('Thanks for playing!');
-    location.href = '../game/index.html';
+    location.href = '../index.html';
 });

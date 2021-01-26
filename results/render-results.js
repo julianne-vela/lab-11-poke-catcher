@@ -1,5 +1,4 @@
 export function renderResults(pokemon) {
-    console.log(pokemon);
     const encounters = pokemon.encountered;
     const captures = pokemon.captured;
     const name = pokemon.pokemon;
