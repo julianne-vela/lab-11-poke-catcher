@@ -21,3 +21,31 @@ export function renderResults(pokemon) {
 
     return tr;
 }
+
+export function encounterMungies(rotoData) {
+    const encounterDataArray = [];
+
+    for (let item of rotoData) {
+        encounterDataArray.push(item.encountered);
+    }
+
+    return encounterDataArray;
+}
+export function captureMungies(rotoData) {
+    const captureDataArray = [];
+
+    for (let item of rotoData) {
+        captureDataArray.push(item.captured);
+    }
+
+    return captureDataArray;
+}
+export function nameMungies(rotoData) {
+    const nameDataArray = [];
+
+    for (let item of rotoData) {
+        nameDataArray.push(item.pokemon);
+    }
+
+    return nameDataArray;
+}

@@ -23,73 +23,104 @@ body {
     --footer-height: 25px;
     
     font-family: 'Chakra Petch', sans-serif;
-    background-color: var(--color4);
+    background-color: var(--color2);
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
+    background-color: hsla(240, 100%, 1%, .25);
+    color: var(--color4);
     height: var(--header-height);
     box-shadow: var(--shadow);
-    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px var(--color1);
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 5px 0;
+    background-color: var(--color3);
+    border-bottom: 2px dashed var(--color1);
+
+}
+
+nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color4);
+    background-color: var(--color1);
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color5);
+    text-decoration: none;
+}
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-bottom: var(--gutter);
 }
 
 section {
-    background-color: var(--color5);
-    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     padding: 10px;
+    background-color: hsla(240, 100%, 1%, .25);
+    border-radius: 20px;
 }
 
-table {
-    border: 2px dashed var(--color2);
-    width: 100%;
-}
-
-table > caption {
-    font-size: 1.5rem;
+.clear-game {
+    display: flex;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-size: 1rem;
     text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color5);
+}
+
+button {
+    display: flex;
+    background-color: var(--color1);
+    color: var(--color4);
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color5);
+}
+
+footer > a {
+text-decoration: none;
 }
 
 footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
+    height: 40px;
+    padding-right: 3px;
     background-color: var(--color3);
+    border-top: 2px dashed var(--color1);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }

@@ -166,28 +166,33 @@ const pokedex = [
         'pokedex': 'http://www.pokemon.com/us/pokedex/charizard'
     },
 ];
-// import {
-//     getRotom,
-//     setRotom,
-//     incrementEncounter,
-//     incrementCapture,
-// } from '../common/utils/local-storage-api.js';
+
+const pokeBag = [
+    { 'pokemon': 'bulbasaur', 'encountered': 2, 'captured': 1 },
+    { 'pokemon': 'caterpie', 'encountered': 2, 'captured': 0 },
+    { 'pokemon': 'kakuna', 'encountered': 2, 'captured': 0 },
+    { 'pokemon': 'squirtle', 'encountered': 1, 'captured': 0 },
+    { 'pokemon': 'charmeleon', 'encountered': 1, 'captured': 1 },
+    { 'pokemon': 'pidgey', 'encountered': 2, 'captured': 1 },
+    { 'pokemon': 'ivysaur', 'encountered': 1, 'captured': 0 },
+    { 'pokemon': 'wartortle', 'encountered': 1, 'captured': 0 },
+    { 'pokemon': 'beedrill', 'encountered': 1, 'captured': 0 },
+    { 'pokemon': 'charmander', 'encountered': 1, 'captured': 0 },
+    { 'pokemon': 'metapod', 'encountered': 1, 'captured': 0 }
+];
+
 import {
-    // renderPokeImage,
     findByName,
 } from '../common/utils/utils.js';
-
-// functions to test: 
-//  findByName
-//  getRotom
-//  setRotom
-//  incrementEncounter
-//  incrementCapture
-//  renderPokeImage
+import {
+    encounterMungies,
+    captureMungies,
+    nameMungies,
+} from '../results/render-results.js';
 
 const test = QUnit.test;
 
-test('Should take in charmander and return the associated object', assert => {
+test('findByName should take in Charmander and return the associated object', assert => {
 
     const pokemon = {
         '_id': '5cef3501ef6005a77cd4fd1a',
@@ -223,7 +228,31 @@ test('Should take in charmander and return the associated object', assert => {
         'pokedex': 'http://www.pokemon.com/us/pokedex/charmander'
     };
 
-    const result = findByName('charmander', pokedex);
+    const result = findByName(pokedex, pokemon.pokemon);
 
     assert.deepEqual(result, pokemon);
+});
+
+test('encounterMungies should take in rotoData and return an array of numbers reflecting the encounter counts', assert => {
+    const encounterDataArray = [2, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1];
+
+    const result = encounterMungies(pokeBag);
+
+    assert.deepEqual(result, encounterDataArray);
+});
+
+test('captureMungies should take in rotoData and return an array of numbers reflecting the capture counts', assert => {
+    const captureDataArray = [1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0];
+
+    const result = captureMungies(pokeBag);
+
+    assert.deepEqual(result, captureDataArray);
+});
+
+test('nameMungies should take in rotoData and return an array of strings reflecting the pokemon names', assert => {
+    const nameDataArray = ['bulbasaur', 'caterpie', 'kakuna', 'squirtle', 'charmeleon', 'pidgey', 'ivysaur', 'wartortle', 'beedrill', 'charmander', 'metapod'];
+
+    const result = nameMungies(pokeBag);
+
+    assert.deepEqual(result, nameDataArray);
 });
