@@ -1,3 +1,4 @@
-import { setThreePokemon } from '../common/utils/utils.js';
+import { setThreePokemon } from './render-pokemon.js';
 
 setThreePokemon();
+

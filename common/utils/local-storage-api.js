@@ -1,7 +1,7 @@
 import { findByName } from './utils.js';
 const ROTOM = 'ROTOM';
+const newRotom = [];
 
-// getRotom - pull encountered/captured data
 export function getRotom() {
     let rotomData = JSON.parse(localStorage.getItem(ROTOM));
 
@@ -11,12 +11,15 @@ export function getRotom() {
     }
     return rotomData;
 }
-// setRotom - set new encountered/captured data
+
 export function setRotom(rotomData) {
     localStorage.setItem(ROTOM, JSON.stringify(rotomData));
 }
 
-// increment encountered - increment each encounter of pokemon
+export function clearRotom() {
+    localStorage.setItem(ROTOM, JSON.stringify(newRotom));
+}
+
 export function incrementEncounter(pokemon) {
     const rotoData = getRotom();
     const poke = findByName(rotoData, pokemon);
