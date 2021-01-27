@@ -47,7 +47,7 @@ export function renderPokeImage(pokemon) {
         if (pokeballs > 1) {
             setThreePokemon();
         } else {
-            window.location = '../../results/index.html';
+            window.location = '../results/index.html';
         }
     });
 
