@@ -49,3 +49,23 @@ export function nameMungies(rotoData) {
 
     return nameDataArray;
 }
+
+export function sortByType(rotoData) {
+    const typeArray = [];
+
+    for (let item of rotoData) {
+        const itemInTypeArray = findByType(rotoData, item.type_1)
+        if (!itemInTypeArray) {
+            const newTypeObj = {
+                type: item.type_1,
+                caught: item.caught
+            };
+            if (newTypeObj.caught > 0) {
+                typeArray.push(newTypeObj);
+            } else {
+                itemInTypeArray.caught += item.caught;
+            }
+            return typeArray;
+        }
+    }
+}

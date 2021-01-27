@@ -14,11 +14,11 @@ html, body {
 body {
     
     /* SCSS HSL */
-    --color1: hsla(0, 100%, 50%, 1);
-    --color2: hsla(0, 100%, 40%, 1);
-    --color3: hsla(233, 57%, 51%, 1);
-    --color4: hsla(52, 100%, 50%, 1);
-    --color5: hsla(52, 66%, 42%, 1);
+    --color1: hsla(0, 100%, 50%, 1); 
+    --color2: hsla(0, 100%, 40%, 1); 
+    --color3: hsla(233, 57%, 51%, 1); 
+    --color4: hsla(52, 100%, 50%, 1); 
+    --color5: hsla(52, 66%, 42%, 1); 
     --color6: hsla(52, 66%, 42%, .25);
     
     --header-height: 80px;
