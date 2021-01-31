@@ -1,8 +1,8 @@
 import { clearRotom, getRotom } from '../common/utils/local-storage-api.js';
-import { captureMungies, encounterMungies, nameMungies } from './render-results.js';
+import { captureMungies, encounterMungies, nameMungies } from '../common/utils/munge-utils.js';
 var ctx = document.getElementById('myChart').getContext('2d');
 
-const rotoData = getRotom();
+const rotomData = getRotom();
 
 // --color1: hsla(0, 100%, 50%, 1); red
 // --color2: hsla(0, 100%, 40%, 1); dark red
@@ -14,10 +14,10 @@ const rotoData = getRotom();
 var myChart = new Chart(ctx, { // eslint-disable-line
     type: 'bar',
     data: {
-        labels: nameMungies(rotoData),
+        labels: nameMungies(rotomData),
         datasets: [{
             label: '# of Captures',
-            data: captureMungies(rotoData),
+            data: captureMungies(rotomData),
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             borderWidth: 1

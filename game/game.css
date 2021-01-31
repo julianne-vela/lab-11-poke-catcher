@@ -1,6 +1,6 @@
 @font-face {
     font-family: Early Gameboy;
-    src: url(../../assets/fonts/early-gameboy.ttf) };
+    src: url(../assets/fonts/early-gameboy.ttf) };
 
 * {
     box-sizing: border-box;
@@ -94,9 +94,16 @@ a > img {
     height: 100vh;
 }
 
+
+.game-boy {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 #progress-bar {
-    width: 250px;
-    height: 300px;
+    width: 420px;
+    height: 60px;
     font-family: Early Gameboy;
     font-size: 1.1rem;
     color: var(--color4);
@@ -105,33 +112,37 @@ a > img {
     left: 130px;
 }
 
-.game-boy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.screen {
+    width: 268px;
+    height: 218px;
+    padding: 5px;
+    font-family: Early Gameboy;
+    font-size: 1.1rem;
+    color: var(--color3);
+    position: absolute;
+    top: 12%;
+    left: 23%;
 }
 
 .image1 { 
     position: absolute;
     width: 70px;
-    left: 120px;
-    top: 100px;
+    left: 15%;
+    top: 2%;
 }
 
 .image2 {
     width: 70px;
     position: absolute;
-    top: 150px;
-    right: 120px;
+    top: 25%;
+    right: 10%;
 }
 
 .image3 {
     width: 70px;
     position: absolute;
-    top: 220px;
-    left: 190px;
+    top: 65%;
+    left: 10%;
 }
 
 button {

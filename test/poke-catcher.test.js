@@ -183,12 +183,13 @@ const pokeBag = [
 
 import {
     findByName,
+    findByType1
 } from '../common/utils/utils.js';
 import {
     encounterMungies,
     captureMungies,
     nameMungies,
-} from '../results/render-results.js';
+} from '../common/utils/munge-utils.js';
 
 const test = QUnit.test;
 
@@ -255,4 +256,45 @@ test('nameMungies should take in rotoData and return an array of strings reflect
     const result = nameMungies(pokeBag);
 
     assert.deepEqual(result, nameDataArray);
+});
+
+test('findByType should take in fire and return the associated object', assert => {
+
+    const pokemon = {
+        '_id': '5cef3501ef6005a77cd4fd1a',
+        'pokemon': 'charmander',
+        'id': 5,
+        'species_id': 4,
+        'height': 6,
+        'weight': 85,
+        'base_experience': 62,
+        'type_1': 'fire',
+        'type_2': 'NA',
+        'attack': 52,
+        'defense': 43,
+        'hp': 39,
+        'special_attack': 60,
+        'special_defense': 50,
+        'speed': 65,
+        'ability_1': 'blaze',
+        'ability_2': 'NA',
+        'ability_hidden': 'solar-power',
+        'color_1': '#F08030',
+        'color_2': 'NA',
+        'color_f': 'NA',
+        'egg_group_1': 'monster',
+        'egg_group_2': 'dragon',
+        'url_image': 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png',
+        'generation_id': 1,
+        'evolves_from_species_id': 'NA',
+        'evolution_chain_id': 2,
+        'shape_id': 6,
+        'shape': 'upright',
+        'pokebase': 'charmander',
+        'pokedex': 'http://www.pokemon.com/us/pokedex/charmander'
+    };
+
+    const result = findByType1(pokedex, pokemon.type_1);
+
+    assert.deepEqual(result, pokemon);
 });

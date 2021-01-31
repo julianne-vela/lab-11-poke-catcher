@@ -104,14 +104,15 @@ a > img {
 }
 
 .screen {
-    width: 250px;
-    height: 300px;
+    width: 260px;
+    height: 208px;
+    padding: 5px;
     font-family: Early Gameboy;
     font-size: 1.1rem;
     color: var(--color3);
     position: absolute;
-    top: 125px;
-    left: 130px;
+    top: 13%;
+    left: 24%;
 }
 
 #start {

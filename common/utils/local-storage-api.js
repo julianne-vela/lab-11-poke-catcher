@@ -1,4 +1,5 @@
 import { findByName } from './utils.js';
+
 const ROTOM = 'ROTOM';
 const newRotom = [];
 
@@ -21,28 +22,33 @@ export function clearRotom() {
 }
 
 export function incrementEncounter(pokemon) {
-    const rotoData = getRotom();
-    const poke = findByName(rotoData, pokemon);
+    const rotomData = getRotom();
+    const poke = findByName(rotomData, pokemon.pokemon);
     if (!poke) {
-        const newRotoData = {
+        const newRotomData = {
             pokemon: pokemon,
             encountered: 1,
             captured: 0,
         };
-        rotoData.push(newRotoData);
+        rotomData.push(newRotomData);
     } else {
         poke.encountered++;
     }
-    setRotom(rotoData);
+    setRotom(rotomData);
 }
 
 // increment captured - increment number of pokemon captured (by individual pokemon)
 export function incrementCapture(pokemon) {
-    const rotoData = getRotom();
+    const rotomData = getRotom();
 
-    const poke = findByName(rotoData, pokemon.pokemon);
+    const poke = findByName(rotomData, pokemon.pokemon);
 
     poke.captured++;
 
-    setRotom(rotoData);
+    setRotom(rotomData);
 }
+
+// export function capitalizeFirstLetter(nameInput) {
+//     const capitalizedName = nameInput.charAt(0).toUpperCase() + nameInput.slice(1);
+//     return capitalizedName;
+// } 
