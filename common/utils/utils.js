@@ -13,11 +13,11 @@ export function findByName(array, pokemon) {
 }
 
 // // call w/ pokeData and pokemon.type_1 //
-// export function findByType1(array, type) {
-//     for (let item of array) {
-//         if (item.type_1 === type) return item;
-//     }
-// }
+export function findByType1(array, type) {
+    for (let item of array) {
+        if (item.type_1 === type) return item;
+    }
+}
 
 // // Take in the rotomData and type, find item with that type in currentTypeArr, if type matches the type in typeImages array, return the associated type image //
 // export function setPokeImage(array, type) {
