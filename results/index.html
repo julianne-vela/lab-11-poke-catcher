@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../common/styles/reset.css">
+    <link rel="stylesheet" href="./results.css">
+    <title>Nessi's Poke Capture</title>
+</head>
+
+<body>
+    <header>
+        <h2>Nessi's Poke Capture | PokeStop Check-Up </h2>
+    </header>
+    <nav>
+        <a href='../index.html'>Pallet Town</a>
+        <a href='../game/index.html'>Explore The Wilds</a>
+        <a href="../results/index.html">PokeStop</a>
+    </nav>
+    <main>
+        <section id="title">
+            <h2>Let's check out your Pokemon and get them all healed up!</h2>
+        </section>
+        <section id="results-container">
+            <content>
+                <canvas id="myChart"></canvas>
+            </content>
+        </section>
+        <button id="clear-game">Return to the Wilds</button>
+    </main>
+    <footer>
+        <a href="../about-me.html"><button class="copy gutter-right">About the Dev</button></a>
+    </footer>
+
+    <script type="module" src="./results.js"></script>
+</body>
+
+</html>

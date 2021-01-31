@@ -1,0 +1,154 @@
+@font-face {
+    font-family: Early Gameboy;
+    src: url(../../assets/fonts/early-gameboy.ttf)
+};
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    
+    /* SCSS HSL */
+    --color1: hsla(0, 100%, 50%, 1);
+    --color2: hsla(0, 100%, 40%, 1);
+    --color3: hsla(233, 57%, 51%, 1);
+    --color4: hsla(52, 100%, 50%, 1);
+    --color5: hsla(52, 66%, 42%, 1);
+    --color6: hsla(52, 66%, 42%, .25);
+    
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+    
+    font-family: Early Gameboy;
+    
+    color: var(--color2);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 900;
+    background-color: var(--color6);
+    color: var(--color4);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+    text-shadow: 4px 4px 7px var(--color3);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 0 5px 0;
+    background-color: var(--color2);
+    border-bottom: 2px dashed var(--color3);
+}
+
+nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color3);
+    background-color: var(--color4);
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color3);
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--color6);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+a > img {
+    width: 500px;
+    height: 100vh;
+}
+
+.game-boy {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.screen {
+    width: 260px;
+    height: 208px;
+    padding: 5px;
+    font-family: Early Gameboy;
+    font-size: 1.1rem;
+    color: var(--color3);
+    position: absolute;
+    top: 13%;
+    left: 24%;
+}
+
+#start {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 90px;
+    right: 195px;
+}
+
+button {
+    display: flex;
+    background-color: var(--color4);
+    color: var(--color3);
+    font-family: Early Gameboy;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color3);
+}
+
+footer > a {
+text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    height: 40px;
+    padding-right: 3px;
+    background-color: var(--color2);
+    border-top: 2px dashed var(--color3);
+    box-shadow: var(--shadow);
+}
