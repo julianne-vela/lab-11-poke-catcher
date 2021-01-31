@@ -1,6 +1,6 @@
 // import { getRotom } from './local-storage-api.js';
 // import { findByType1 } from './utils.js';
-import pokemonData from '../../data/pokemon.js';
+// import pokemonData from '../../data/pokemon.js';
 
 export function encounterMungies(rotomData) {
     const encounterDataArray = [];
